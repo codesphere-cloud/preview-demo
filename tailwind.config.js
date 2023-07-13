@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-bg': '#111827',
+        'custom-bg': 'black',
         'custom-card-bg': '#0f172a',
         'custom-border': '#1e293b',
         'custom-accent': '#6366f1',
@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require("tailwindcss-inner-border"),
   ],
 }
