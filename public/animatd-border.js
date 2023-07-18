@@ -12,6 +12,9 @@ window.onload = function() {
     // Get the total perimeter
     let perimeter = 2 * (imgWidth + imgHeight);
 
+    // Distance to border
+    let distanceToBorder = "30px";
+
     // Get the ratio of the sides
     let ratioWidth = imgWidth / perimeter;
     let ratioHeight = imgHeight / perimeter;
@@ -31,40 +34,40 @@ window.onload = function() {
     style.innerHTML = `
     @keyframes x {
         0% {
-        --x: 30px;
-        --y: 30px;
+        --x: ${distanceToBorder};
+        --y: ${distanceToBorder};
         }
         ${percentageWidth - 2}% {
-        --x: calc(var(--image-width) - 30px);
-        --y: 30px;
+        --x: calc(var(--image-width) - ${distanceToBorder});
+        --y: ${distanceToBorder};
         }
         ${percentageWidth}% {
-            --x: calc(var(--image-width) - 30px);
-            --y: 30px;
+            --x: calc(var(--image-width) - ${distanceToBorder});
+            --y: ${distanceToBorder};
         }
         ${percentageWidth + percentageHeight - 2}% {
-            --x: calc(var(--image-width) - 30px);
-            --y: calc(var(--image-height) - 30px);
+            --x: calc(var(--image-width) - ${distanceToBorder});
+            --y: calc(var(--image-height) - ${distanceToBorder});
         }
         ${percentageWidth + percentageHeight}% {
-            --x: calc(var(--image-width) - 30px);
-            --y: calc(var(--image-height) - 30px);
+            --x: calc(var(--image-width) - ${distanceToBorder});
+            --y: calc(var(--image-height) - ${distanceToBorder});
         }
         ${percentageWidth*2 + percentageHeight -2}% {
-        --x: 30px;
-        --y: calc(var(--image-height) - 30px);
+        --x: ${distanceToBorder};
+        --y: calc(var(--image-height) - ${distanceToBorder});
         }
         ${percentageWidth*2 + percentageHeight}% {
-        --x: 30px;
-        --y: calc(var(--image-height) - 30px);
+        --x: ${distanceToBorder};
+        --y: calc(var(--image-height) - ${distanceToBorder});
         }
         ${percentageWidth*2 + percentageHeight*2 -2}% {
-            --x: 30px;
-            --y: 30px;
+            --x: ${distanceToBorder};
+            --y: ${distanceToBorder};
         }
         100% {
-        --x: 30px;
-        --y: 30px;
+        --x: ${distanceToBorder};
+        --y: ${distanceToBorder};
         }
     }
     
