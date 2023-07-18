@@ -8,6 +8,9 @@ module.exports = {
         'custom-card-bg': '#0f172a',
         'custom-border': '#1e293b',
         'custom-accent': '#814BF6',
+        // custom accent 2-3 currently mainly used for blurry background accents
+        'custom-accent-2': '#80caff',
+        'custom-accent-3': '#4f46e5',
       }
     },
   },
