@@ -7,6 +7,7 @@
     "build:tailwind": "npx tailwindcss -i src/styles.css -o public/index.css",
     "watch:tailwind": "npx tailwindcss -i src/styles.css -o public/index.css --watch",
     "start:server": "nodemon index.js",
+    "start:prod": "npm run build:tailwind && node index.js",
     "start": "npm-run-all -p watch:tailwind start:server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
